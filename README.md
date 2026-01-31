@@ -52,19 +52,22 @@ Columns:
 PassengerId
 Survived
 
-Notes
-Pipeline ensures consistency:
-The pipeline automatically applies the same preprocessing to the test set as it learned from training, preventing inconsistencies or data leakage.
-Feature Importance Insights:
-Sex_female and Pclass_1 likely have the strongest positive impact on survival
-Pclass_3 and higher age negatively influence survival
-(See feature_importance.png for full ranking)
-Reproducibility:
-Random seed (random_state=42) ensures consistent train-test splits
-Logistic Regression’s max_iter=1000 ensures convergence
-Conclusion
-The submitted predictions reflect the model’s understanding of passenger survival based on patterns in the training dataset. This approach:
-Uses a robust pipeline to prevent data leakage
-Enables interpretability via coefficients
+Notes:
 
-This methodology is scalable, reproducible, and aligns with standard machine learning best practices.
+Pipeline ensures consistency:
+  The pipeline automatically applies the same preprocessing to the test set as it learned from training, preventing inconsistencies or data leakage.
+  
+Feature Importance Insights:
+ Sex_female and Pclass_1 likely have the strongest positive impact on survival
+Pclass_3 and higher age negatively influence survival
+(See feature_importance.png for full ranking).
+
+Reproducibility:
+  Random seed (random_state=42) ensures consistent train-test splits
+Logistic Regression’s max_iter=1000 ensures convergence.
+
+Conclusion;
+  The submitted predictions reflect the model’s understanding of passenger survival based on patterns in the training dataset. This approach:
+Uses a robust pipeline to prevent data leakage
+Enables interpretability via coefficients.
+  This methodology is scalable, reproducible, and aligns with standard machine learning best practices.
